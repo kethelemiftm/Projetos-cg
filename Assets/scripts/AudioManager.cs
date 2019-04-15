@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   public static AudioManager instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+   public AudioSFX audioSFX;
+    void Awake () {
+        if (instance == null) {
+            instance = this;
+        }
     }
-}
+        
+
+        public void PlaySoundCoinPickup(GameObject obj) {
+            AudioSource.PlayClipAtPoint(audioSFX.coinPickup, obj.transform.position);
+        }
+    }
+    
+

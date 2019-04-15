@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class audioSFX : MonoBehaviour
+public class AudioSFX
 {
    public AudioClip coinPickup;
 }
