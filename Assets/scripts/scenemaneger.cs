@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class scenemaneger : MonoBehaviour
 {
@@ -10,14 +11,20 @@ public class scenemaneger : MonoBehaviour
    private Transform Tape = null; 
 
    public UIcomponents uicomponents;
-    void Start()
-    {
-        
+
+   scenedata sceneData = new scenedata();
+    void Awake() {
+        Assert.IsNotNull(Tape);
     }
 
-    // Update is called once per frame
+
+  
     void Update()
     {
         Tape.position = Tape.position + TapeSpeed * Time.deltaTime;
+    }
+
+    public void IncrementCoinCount(){
+
     }
 }
