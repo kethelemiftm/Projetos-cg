@@ -15,7 +15,6 @@ public class Hud {
 [Header("Text")]
     public Text txtCoinCount;
 
-    public Text txtLifeCount;
 
 [Header("Other")]
     public GameObject panelHud;

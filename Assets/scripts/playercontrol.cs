@@ -9,7 +9,7 @@ public class playercontrol : MonoBehaviour
             SFXManager.instance.ShowCoinParticles(other.gameObject);
             AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
-            scenemaneger.instance.IncrementCoinCount();
+            LevelManeger.instance.IncrementCoinCount();
         }
     }
 }
